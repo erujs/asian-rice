@@ -1,0 +1,97 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+palette = "latte"
+
+format = """
+[░▒▓](night)\
+$os\
+[](fg:night bg:teal)\
+$username\
+$hostname\
+[](fg:teal bg:cyan)\
+$directory\
+[](fg:cyan bg:quartz)\
+$git_branch\
+$git_status\
+$hg_branch\
+[](fg:quartz bg:night)\
+[▓▒░](night)\
+$status\
+$character\
+"""
+
+[os]
+format = '[ $symbol]($style)'
+style = 'fg:teal bg:night'
+disabled = false
+
+[username]
+show_always = true
+style_user = "fg:night bg:teal"
+style_root = "fg:teal bg:night bold"
+format = "[ $user]($style)"
+
+[hostname]
+ssh_only = false
+style = "fg:night bg:teal"
+format = "[@$hostname]($style)"
+
+[directory]
+style = "fg:night bg:cyan"
+format = "[ $path ]($style)"
+truncation_length = 2
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "bg:quartz"
+format = '[[ $symbol $branch ](fg:night bg:quartz)]($style)'
+
+[git_status]
+style = "bg:quartz"
+format = '[[($all_status$ahead_behind )](fg:night bg:quartz)]($style)'
+
+[hg_branch]
+disabled = false
+symbol = ""
+style = "bg:quartz"
+format = '[[ $symbol $branch ](fg:night bg:quartz)]($style)'
+
+[character]
+success_symbol = "[❯](bold blue)"
+error_symbol = "[❯](bold red)"
+disabled = false
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+AOSC = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+Nobara = " "
+Unknown = " "
+
+[palettes.latte]
+night = "#090c0c"
+teal = "#ccfbf1"
+cyan = "#cefafe"
+quartz = "#eafef8"
+blue = "#dbeafe"
+red = "#ffe2e2"
