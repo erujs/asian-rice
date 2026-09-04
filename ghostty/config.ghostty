@@ -1,0 +1,7 @@
+theme = TokyoNight Moon
+background-opacity = 0.55
+background-blur = 0
+unfocused-split-opacity = 0.5
+window-width = 90
+window-height = 24
+keybind = ctrl+r=reload_config
